@@ -7,9 +7,9 @@ public class Producto {
     int valor;
     String descripcion;
     String categoria;
-    boolean iva;
+    String iva;
 
-    public Producto(String nombre, int codigo, int valor, String descripcion, String categoria, boolean iva) {
+    public Producto(String nombre, int codigo, int valor, String descripcion, String categoria, String iva) {
         this.nombre = nombre;
         this.codigo = codigo;
         this.valor = valor;
@@ -58,11 +58,11 @@ public class Producto {
         this.categoria = categoria;
     }
 
-    public boolean isIva() {
+    public String isIva() {
         return iva;
     }
 
-    public void setIva(boolean iva) {
+    public void setIva(String iva) {
         this.iva = iva;
     }
 
@@ -73,6 +73,6 @@ public class Producto {
                 "Valor: $" + valor + "\n" +
                 "Descripción: " + descripcion + "\n" +
                 "Categoría: " + categoria + "\n" +
-                "IVA=" + iva;
+                iva;
     }
 }

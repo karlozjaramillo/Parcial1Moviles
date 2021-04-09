@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Parcial1Moviles</string>
+    <string-array name="categorias">
+        <item>Frutas y Verduras</item>
+        <item>Panadería y Dulces</item>
+        <item>Huevos, Lácteos y Café</item>
+        <item>Zumos y Bebidas</item>
+    </string-array>
+    <string-array name="iva">
+        <item>I.V.A.=SÍ</item>
+        <item>I.V.A.=NO</item>
+    </string-array>
 </resources>
