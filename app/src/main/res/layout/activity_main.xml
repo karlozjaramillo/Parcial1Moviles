@@ -149,7 +149,7 @@
         android:layout_marginRight="5dp"
         android:text="AGREGAR"
         app:backgroundTint="#13950F"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintBottom_toTopOf="@+id/btnBaratos"
         app:layout_constraintEnd_toStartOf="@+id/btnPromedio"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spIva" />
@@ -164,7 +164,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/btnBaratos" />
 
     <Button
         android:id="@+id/btnPromedio"
@@ -176,13 +176,13 @@
         android:layout_marginRight="55dp"
         android:text="PROMEDIO"
         app:backgroundTint="#13950F"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintBottom_toTopOf="@+id/btnCostosos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnAgregar"
         app:layout_constraintTop_toBottomOf="@+id/spIva" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnBaratos"
         android:layout_width="145dp"
         android:layout_height="50dp"
         android:layout_marginStart="55dp"
@@ -192,12 +192,12 @@
         android:text="BARATOS"
         app:backgroundTint="#13950F"
         app:layout_constraintBottom_toTopOf="@+id/lvLista"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintEnd_toStartOf="@+id/btnCostosos"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnAgregar" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnCostosos"
         android:layout_width="145dp"
         android:layout_height="50dp"
         android:layout_marginStart="5dp"
@@ -208,7 +208,7 @@
         app:backgroundTint="#13950F"
         app:layout_constraintBottom_toTopOf="@+id/lvLista"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintStart_toEndOf="@+id/btnBaratos"
         app:layout_constraintTop_toBottomOf="@+id/btnPromedio" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
