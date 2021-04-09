@@ -157,10 +157,9 @@
     <ListView
         android:id="@+id/lvLista"
         android:layout_width="300dp"
-        android:layout_height="310dp"
-        android:layout_marginBottom="10dp"
+        android:layout_height="257dp"
         android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnSiguiente"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -210,5 +209,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnBaratos"
         app:layout_constraintTop_toBottomOf="@+id/btnPromedio" />
+
+    <Button
+        android:id="@+id/btnSiguiente"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:text="SIGUIENTE"
+        app:backgroundTint="#0F4B95"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lvLista" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

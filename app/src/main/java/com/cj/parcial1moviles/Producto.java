@@ -1,6 +1,9 @@
 package com.cj.parcial1moviles;
 
-public class Producto {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Producto implements Parcelable {
 
     String nombre;
     int codigo;
@@ -17,6 +20,42 @@ public class Producto {
         this.categoria = categoria;
         this.iva = iva;
     }
+
+    protected Producto(Parcel in) {
+        nombre = in.readString();
+        codigo = in.readInt();
+        valor = in.readInt();
+        descripcion = in.readString();
+        categoria = in.readString();
+        iva = in.readString();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(nombre);
+        dest.writeInt(codigo);
+        dest.writeInt(valor);
+        dest.writeString(descripcion);
+        dest.writeString(categoria);
+        dest.writeString(iva);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<Producto> CREATOR = new Creator<Producto>() {
+        @Override
+        public Producto createFromParcel(Parcel in) {
+            return new Producto(in);
+        }
+
+        @Override
+        public Producto[] newArray(int size) {
+            return new Producto[size];
+        }
+    };
 
     public String getNombre() {
         return nombre;

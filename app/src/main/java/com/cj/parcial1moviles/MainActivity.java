@@ -2,7 +2,9 @@ package com.cj.parcial1moviles;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnPromedio;
     private Button btnBaratos;
     private Button btnCostosos;
+    private Button btnSiguiente;
     private ArrayAdapter<String> adapter;
     private ArrayList<Producto> productos = new ArrayList<>();
 
@@ -46,10 +49,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnPromedio = findViewById(R.id.btnPromedio);
         btnBaratos = findViewById(R.id.btnBaratos);
         btnCostosos = findViewById(R.id.btnCostosos);
+        btnSiguiente = findViewById(R.id.btnSiguiente);
         btnAgregar.setOnClickListener(this);
         btnPromedio.setOnClickListener(this);
         btnBaratos.setOnClickListener(this);
         btnCostosos.setOnClickListener(this);
+        btnSiguiente.setOnClickListener(this);
 
         ArrayAdapter<CharSequence> adapterCategorias = ArrayAdapter.createFromResource(this,
                 R.array.categorias, android.R.layout.simple_spinner_item);
@@ -147,6 +152,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 listaPromedio.add(mensajePromedio);
                 adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listaPromedio);
                 lvLista.setAdapter(adapter);
+                break;
+            case R.id.btnSiguiente:
+                Intent myIntent = new Intent(this, Exentos.class);
+                Bundle bundle = new Bundle();
+                bundle.putParcelableArrayList("productos", productos);
+                myIntent.putExtras(bundle);
+                startActivity(myIntent);
                 break;
         }
     }
