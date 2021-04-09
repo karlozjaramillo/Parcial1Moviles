@@ -42,13 +42,22 @@ public class Exentos extends AppCompatActivity implements View.OnClickListener {
                 for (Producto prods: ListObjetos
                      ) {
                     if (prods.iva.equals("I.V.A.=SÍ")){
-//                        listaIva.add();
+                        listaIva.add(prods.toString());
                     }
                 }
-                adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, ListObjetos);
+                adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listaIva);
                 lvLista.setAdapter(adapter);
                 break;
             case R.id.btnSinIva:
+                ArrayList<String> listaSinIva = new ArrayList<>();
+                for (Producto prods: ListObjetos
+                ) {
+                    if (prods.iva.equals("I.V.A.=NO")){
+                        listaSinIva.add(prods.toString());
+                    }
+                }
+                adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listaSinIva);
+                lvLista.setAdapter(adapter);
                 break;
         }
     }
