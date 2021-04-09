@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -23,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Spinner spIva;
     private ListView lvLista;
     private Button btnAgregar;
-    private Button btnSiguiente;
+    private Button btnPromedio;
     private ArrayAdapter<String> adapter;
     private ArrayList<Producto> productos = new ArrayList<>();
 
@@ -40,9 +39,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         spIva = findViewById(R.id.spIva);
         lvLista = findViewById(R.id.lvLista);
         btnAgregar = findViewById(R.id.btnAgregar);
-        btnSiguiente = findViewById(R.id.btnSiguiente);
+        btnPromedio = findViewById(R.id.btnPromedio);
         btnAgregar.setOnClickListener(this);
-        btnSiguiente.setOnClickListener(this);
+        btnPromedio.setOnClickListener(this);
 
         ArrayAdapter<CharSequence> adapterCategorias = ArrayAdapter.createFromResource(this,
                 R.array.categorias, android.R.layout.simple_spinner_item);
